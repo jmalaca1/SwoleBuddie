@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Layout from './components/Layout.vue'
-import HomePage from './pages/HomePage.vue'
-import MealGenerator from './pages/MealGenerator.vue'
-import MealDetails from './pages/MealDetails.vue'
-import Rewards from './pages/Rewards.vue'
+import HomePage from './Pages/HomePage.vue'
+import MealGenerator from './Pages/MealGenerator.vue'
+import MealDetails from './Pages/MealDetails.vue'
+import Rewards from './Pages/Rewards.vue'
 
 const routes = [
   {
