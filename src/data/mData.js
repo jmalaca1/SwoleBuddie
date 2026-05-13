@@ -1,23 +1,9 @@
-export interface Meal {
-  id: string;
-  name: string;
-  description: string;
-  image: string;
-  price: number;
-  calories: number;
-  prepTime: number;
-  tags: string[];
-  ingredients: string[];
-  instructions: string[];
-  goals: string[];
-}
-
-export const MEALS: Meal[] = [
+export const MEALS = [
   {
     id: "1",
     name: "Grilled Salmon with Veggies",
     description: "High-protein, omega-3 rich meal perfect for muscle building and heart health",
-    image: "https://images.unsplash.com/photo-1601314212732-047d4bdffd22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGh5JTIwZ3JpbGxlZCUyMHNhbG1vbiUyMHZlZ2V0YWJsZXN8ZW58MXx8fHwxNzc0ODM0ODE3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "https://images.unsplash.com/photo-1601314212732-047d4bdffd22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGh5JTIwZ3JpbGxlZCUyMHNhbG1vbiUyMHZlZ2V0YWJsZXN8ZW58MXx8fHwxNzc0ODM0ODE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
     price: 12.50,
     calories: 450,
     prepTime: 25,
@@ -47,7 +33,7 @@ export const MEALS: Meal[] = [
     id: "2",
     name: "Quinoa Buddha Bowl",
     description: "Nutrient-packed plant-based bowl with complete proteins and fiber",
-    image: "https://images.unsplash.com/photo-1679279726937-122c49626802?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxxdWlub2ElMjBidWRkaGElMjBib3dsJTIwdmVnZXRhYmxlc3xlbnwxfHx8fDE3NzQ3NjY3MjJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "https://images.unsplash.com/photo-1679279726937-122c49626802?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxxdWlub2ElMjBidWRkaGElMjBib3dsJTIwdmVnZXRhYmxlc3xlbnwxfHx8fDE3NzQ3NjY3MjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
     price: 9.75,
     calories: 520,
     prepTime: 30,
@@ -78,7 +64,7 @@ export const MEALS: Meal[] = [
     id: "3",
     name: "Asian Chicken Stir-Fry",
     description: "Quick and flavorful high-protein meal with colorful vegetables",
-    image: "https://images.unsplash.com/photo-1761314025701-34795be5f737?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwc3RpciUyMGZyeSUyMGFzaWFufGVufDF8fHx8MTc3NDgzNDgxOHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "https://images.unsplash.com/photo-1761314025701-34795be5f737?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwc3RpciUyMGZyeSUyMGFzaWFufGVufDF8fHx8MTc3NDgzNDgxOHww&ixlib=rb-4.1.0&q=80&w=1080",
     price: 10.25,
     calories: 480,
     prepTime: 20,
@@ -110,7 +96,7 @@ export const MEALS: Meal[] = [
     id: "4",
     name: "Avocado Toast Power Breakfast",
     description: "Energy-packed breakfast with healthy fats and complex carbs",
-    image: "https://images.unsplash.com/photo-1623691751118-1de275697349?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGh5JTIwYnJlYWtmYXN0JTIwYXZvY2FkbyUyMHRvYXN0fGVufDF8fHx8MTc3NDc4ODYzN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "https://images.unsplash.com/photo-1623691751118-1de275697349?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGh5JTIwYnJlYWtmYXN0JTIwYXZvY2FkbyUyMHRvYXN0fGVufDF8fHx8MTc3NDc4ODYzN3ww&ixlib=rb-4.1.0&q=80&w=1080",
     price: 8.50,
     calories: 420,
     prepTime: 10,
@@ -140,7 +126,7 @@ export const MEALS: Meal[] = [
     id: "5",
     name: "Greek Salad Bowl",
     description: "Mediterranean-inspired fresh salad with authentic flavors",
-    image: "https://images.unsplash.com/photo-1769481614068-47cfb4d1f125?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmVlayUyMHNhbGFkJTIwZnJlc2glMjB2ZWdldGFibGVzfGVufDF8fHx8MTc3NDcyMTEwOHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "https://images.unsplash.com/photo-1769481614068-47cfb4d1f125?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmVlayUyMHNhbGFkJTIwZnJlc2glMjB2ZWdldGFibGVzfGVufDF8fHx8MTc3NDcyMTEwOHww&ixlib=rb-4.1.0&q=80&w=1080",
     price: 9.25,
     calories: 380,
     prepTime: 15,
@@ -169,17 +155,7 @@ export const MEALS: Meal[] = [
   }
 ];
 
-export interface Badge {
-  id: string;
-  name: string;
-  description: string;
-  icon: string;
-  unlocked: boolean;
-  progress?: number;
-  requirement: number;
-}
-
-export const BADGES: Badge[] = [
+export const BADGES = [
   {
     id: "1",
     name: "First Meal",
@@ -237,11 +213,11 @@ export const BADGES: Badge[] = [
 ];
 
 export const GOAL_OPTIONS = [
-  { id: "weight-loss", label: "Weight Loss", color: "bg-emerald-100 text-emerald-700" },
-  { id: "muscle-gain", label: "Muscle Gain", color: "bg-blue-100 text-blue-700" },
-  { id: "heart-health", label: "Heart Health", color: "bg-red-100 text-red-700" },
-  { id: "plant-based", label: "Plant-Based", color: "bg-green-100 text-green-700" },
-  { id: "quick-meals", label: "Quick Meals", color: "bg-orange-100 text-orange-700" },
-  { id: "energy-boost", label: "Energy Boost", color: "bg-yellow-100 text-yellow-700" },
-  { id: "balanced", label: "Balanced Diet", color: "bg-purple-100 text-purple-700" }
+  { id: "weight-loss", label: "Weight Loss" },
+  { id: "muscle-gain", label: "Muscle Gain" },
+  { id: "heart-health", label: "Heart Health" },
+  { id: "plant-based", label: "Plant-Based" },
+  { id: "quick-meals", label: "Quick Meals" },
+  { id: "energy-boost", label: "Energy Boost" },
+  { id: "balanced", label: "Balanced Diet" }
 ];
