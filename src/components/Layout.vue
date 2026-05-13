@@ -56,14 +56,15 @@
 <script setup>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { Home, Sparkles, Trophy } from 'lucide-vue-next'
+import { Home, Sparkles, Trophy, User } from 'lucide-vue-next'
 
 const route = useRoute()
 
 const navItems = [
   { path: '/', icon: Home, label: 'Home' },
   { path: '/generate', icon: Sparkles, label: 'Generate' },
-  { path: '/rewards', icon: Trophy, label: 'Rewards' }
+  { path: '/rewards', icon: Trophy, label: 'Rewards' },
+  { path: '/profile', icon: User, label: 'Profile' }
 ]
 
 const isActive = (path) => {
