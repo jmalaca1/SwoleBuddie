@@ -1,6 +1,14 @@
-import { RouterProvider } from "react-router";
-import { router } from "./routes";
+<template>
+  <router-view />
+</template>
 
-export default function App() {
-  return <RouterProvider router={router} />;
+<script>
+import { router } from './routes';
+
+export default {
+  name: 'App',
+  setup() {
+    return { router };
+  }
 }
+</script>
