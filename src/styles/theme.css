@@ -1,0 +1,13 @@
+:root {
+  --font-serif: 'Playfair Display', 'Bodoni Moda', serif;
+  --font-sans: 'Montserrat', sans-serif;
+  --font-editorial: 'Cormorant Garamond', serif;
+
+  /* Art Deco Black & White Palette */
+  --background: #fafaf8;
+  --foreground: #1a1a1a;
+  --accent: #1a1a1a;
+  --accent-gray: #6b6b6b;
+  --muted: #e8e8e3;
+  /* ... full file contains all variables */
+}

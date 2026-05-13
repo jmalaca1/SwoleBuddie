@@ -1,6 +1,6 @@
-<template>
-  <router-view />
-</template>
+import { RouterProvider } from "react-router";
+import { router } from "./routes";
 
-<script setup>
-</script>
+export default function App() {
+  return <RouterProvider router={router} />;
+}
