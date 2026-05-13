@@ -3,12 +3,7 @@
 </template>
 
 <script>
-import { router } from './routes';
-
 export default {
-  name: 'App',
-  setup() {
-    return { router };
-  }
+  name: 'App'
 }
 </script>
