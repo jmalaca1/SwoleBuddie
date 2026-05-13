@@ -1,19 +1,26 @@
-import { createBrowserRouter } from "react-router";
-import { Home } from "./pages/Home";
-import { MealGenerator } from "./pages/MealGenerator";
-import { MealDetails } from "./pages/MealDetails";
-import { Rewards } from "./pages/Rewards";
-import { Layout } from "./components/Layout";
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from './pages/Home.vue'
+import MealGenerator from './pages/MealGenerator.vue'
+import MealDetails from './pages/MealDetails.vue'
+import Rewards from './pages/Rewards.vue'
+import Layout from './components/Layout.vue'
 
-export const router = createBrowserRouter([
+const routes = [
   {
-    path: "/",
-    Component: Layout,
+    path: '/',
+    component: Layout,
     children: [
-      { index: true, Component: Home },
-      { path: "generate", Component: MealGenerator },
-      { path: "meal/:mealId", Component: MealDetails },
-      { path: "rewards", Component: Rewards },
+      { path: '', component: Home },
+      { path: 'generate', component: MealGenerator },
+      { path: 'meal/:mealId', component: MealDetails },
+      { path: 'rewards', component: Rewards },
     ],
   },
-]);
+]
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+})
+
+export default router
