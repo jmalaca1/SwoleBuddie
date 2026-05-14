@@ -1,12 +1,88 @@
-/* Global Styles */
+@import "tailwindcss";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --champagne: #F7F3E8;
+  --champagne-dark: #EBE3D5;
+  --library-brown: #2C1810;
+  --leather-brown: #3D2B1F;
+  --warm-brown: #5C3A1E;
+  --gold: #D4AF37;
+  --gold-dim: #B8960C;
+  --gold-light: #F3E5AB;
+  --text-dark: #2C1810;
+  --text-warm: #5C3A1E;
+}
+
 body {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Georgia', 'Times New Roman', 'Palatino', 'Segoe UI', serif;
+  background: var(--champagne);
+  color: var(--text-dark);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Library-style button (replaces wood-button) */
+button.library-button {
+  background: linear-gradient(145deg, var(--library-brown), var(--leather-brown));
+  border: 1px solid var(--gold-dim);
+  color: var(--gold-light);
+  transition: all 0.3s ease;
+}
+
+button.library-button:hover {
+  background: linear-gradient(145deg, var(--leather-brown), var(--library-brown));
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+  border-color: var(--gold);
+}
+
+/* Custom library scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--champagne-dark);
+  border-left: 1px solid var(--gold-dim);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--leather-brown);
+  border-radius: 0px;
+  border: 1px solid var(--gold-dim);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--warm-brown);
+}
+
+/* Gold accent for links */
+a {
+  color: var(--gold-dim);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--gold);
 }

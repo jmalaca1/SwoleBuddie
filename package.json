@@ -13,6 +13,7 @@
     "format:check": "prettier --check src/"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.3.0",
     "@vueuse/motion": "^3.0.3",
     "eslint": "^10.0.0",
     "eslint-plugin-vue": "github:eslint/js",
@@ -20,18 +21,17 @@
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-router-dom": "^7.15.0",
+    "tailwindcss": "^4.3.0",
     "vue": "^3.5.25",
     "vue-router": "^4.6.4"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@tailwindcss/vite": "^4.1.18",
     "@vitejs/plugin-vue": "^6.0.2",
     "autoprefixer": "^10.4.27",
     "postcss": "^8.5.9",
     "prettier": "^3.8.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
-    "tailwindcss": "^4.2.2",
     "vite": "^7.3.1"
   }
 }

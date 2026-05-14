@@ -1,128 +1,64 @@
 <template>
-  <div class="profile-page">
-    <div class="profile-header">
-      <h1>Profile</h1>
+  <div>
+    <!-- Header -->
+    <div class="mb-8 border-b border-[#D4AF37]/30 pb-6">
+      <h1 class="text-4xl font-light tracking-wide mb-2 text-[#2C1810] font-serif">Profile</h1>
+      <p class="text-[#5C3A1E] text-sm italic">Your library card</p>
     </div>
-    
-    <div class="profile-info">
-      <div class="avatar">
-        <div class="avatar-placeholder">
-          👤
+
+    <!-- Profile Card - Vintage Library Card -->
+    <div class="bg-white rounded-sm p-6 shadow-md border border-[#EBE3D5] mb-6">
+      <div class="flex items-center gap-5 mb-6">
+        <div class="w-16 h-16 bg-[#2C1810] rounded-full flex items-center justify-center border-2 border-[#D4AF37]">
+          <span class="text-2xl text-[#D4AF37]">👤</span>
+        </div>
+        <div>
+          <h2 class="text-xl font-medium text-[#2C1810]">Alex Morgan</h2>
+          <p class="text-sm text-[#5C3A1E] italic">Member since Jan 2024</p>
         </div>
       </div>
       
-      <div class="user-details">
-        <h2>Username</h2>
-        <p>Member since: {{ joinDate }}</p>
+      <!-- Stats -->
+      <div class="grid grid-cols-3 gap-3 mb-6">
+        <div class="text-center border-r border-[#EBE3D5]">
+          <p class="text-2xl font-semibold text-[#2C1810]">42</p>
+          <p class="text-xs text-[#5C3A1E] uppercase tracking-wide">Meals</p>
+        </div>
+        <div class="text-center border-r border-[#EBE3D5]">
+          <p class="text-2xl font-semibold text-[#2C1810]">14</p>
+          <p class="text-xs text-[#5C3A1E] uppercase tracking-wide">Streak</p>
+        </div>
+        <div class="text-center">
+          <p class="text-2xl font-semibold text-[#2C1810]">$668</p>
+          <p class="text-xs text-[#5C3A1E] uppercase tracking-wide">Saved</p>
+        </div>
       </div>
+
+      <button class="w-full py-2.5 bg-[#2C1810] text-[#D4AF37] text-sm rounded-sm hover:bg-[#3D2B1F] transition-colors uppercase tracking-wider">
+        Edit Profile
+      </button>
     </div>
 
-    <div class="stats">
-      <div class="stat-card">
-        <h3>Total Meals Generated</h3>
-        <p class="stat-number">{{ totalMeals }}</p>
+    <!-- Achievements -->
+    <h3 class="text-sm font-medium text-[#2C1810] mb-3 uppercase tracking-wider border-l-2 border-[#D4AF37] pl-3">Recent Achievements</h3>
+    <div class="grid grid-cols-2 gap-3">
+      <div class="bg-white rounded-sm p-3 shadow-md border border-[#EBE3D5] flex items-center gap-2">
+        <span class="text-xl">🏆</span>
+        <div>
+          <p class="text-sm font-medium text-[#2C1810]">Week Warrior</p>
+          <p class="text-xs text-[#5C3A1E] italic">7 day streak</p>
+        </div>
       </div>
-      <div class="stat-card">
-        <h3>Current Streak</h3>
-        <p class="stat-number">{{ streak }}</p>
+      <div class="bg-white rounded-sm p-3 shadow-md border border-[#EBE3D5] flex items-center gap-2">
+        <span class="text-xl">⭐</span>
+        <div>
+          <p class="text-sm font-medium text-[#2C1810]">Meal Master</p>
+          <p class="text-xs text-[#5C3A1E] italic">10 meals</p>
+        </div>
       </div>
-    </div>
-
-    <div class="settings">
-      <h3>Settings</h3>
-      <button class="settings-btn">Edit Profile</button>
-      <button class="settings-btn logout">Logout</button>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
-const joinDate = ref('January 2024')
-const totalMeals = ref(42)
-const streak = ref(7)
 </script>
-
-<style scoped>
-.profile-page {
-  padding: 20px;
-  padding-bottom: 80px;
-}
-
-.profile-header h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.profile-info {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  margin-bottom: 30px;
-  padding: 20px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.avatar-placeholder {
-  width: 80px;
-  height: 80px;
-  background: #4CAF50;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-}
-
-.user-details h2 {
-  margin: 0 0 5px 0;
-}
-
-.stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  margin-bottom: 30px;
-}
-
-.stat-card {
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.stat-number {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #4CAF50;
-  margin: 10px 0 0 0;
-}
-
-.settings {
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.settings-btn {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  background: #f0f0f0;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.settings-btn.logout {
-  background: #ff4444;
-  color: white;
-}
-</style>

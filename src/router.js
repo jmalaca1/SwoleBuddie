@@ -4,8 +4,9 @@ import HomePage from './Pages/HomePage.vue'
 import MealGenerator from './Pages/MealGenerator.vue'
 import MealDetails from './Pages/MealDetails.vue'
 import ProfilePage from './Pages/ProfilePage.vue'
-
 import Rewards from './Pages/Rewards.vue'
+import GroceryStores from './Pages/GroceryStores.vue'
+import Restaurants from './Pages/Restaurants.vue'
 
 const routes = [
   {
@@ -36,6 +37,16 @@ const routes = [
         path: 'profile',
         name: 'Profile',
         component: ProfilePage
+      },
+      {
+        path: 'grocery-stores',
+        name: 'GroceryStores',
+        component: GroceryStores
+      },
+      {
+        path: 'restaurants/:mealId?',
+        name: 'Restaurants',
+        component: Restaurants
       }
     ]
   }
